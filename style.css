@@ -12,8 +12,9 @@ body{
 }
 .background {
     width: 100%;
+    /* spec. vh arba vw vienetas. vh yra kaip procentas */
     height: 100vh;
-    background-image: url(../img/kalnas.png);
+    background-image: url(./kalnai.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,21 +23,39 @@ body{
     .container{
         width:800px;
         position: absolute;
+        /* bus nepriklausomai nuo dydzio paciame viduryje */
         top: 50%;
         left:50%;
         transform: translate(-50%, -50%);
         }
             .left-column{
-            display: inline-block;
             width: 40%;
-            background-image: url(kalnai.png);
+            color: #fff;
+            /* nors background yra pav. bet visada ir spalva reikia uzdeti */
+            background-color: aqua;
             float: left;
+            position: absolute;
+            /* nurodome kiek nuo virsaus ir apacios atsitrauke */
+            top:30px;
+            bottom: 30px;
+            background-image: url(./kalnai.png);
+            /* kad nesikartotu daug tu paciu pav. nes defaut yra, kad kartotusi */
+            background-repeat: no-repeat;
+            /* kad nuotrauka padengtu visa plota */
+            background-size: cover;
+            background-position: center;
             }
             .left-column>h1{
-                
+                width: 100%;
+                padding: 20px;
             }
             .left-column>.links{
-                
+                width: 100%;
+                padding: 20px;
+                color:#fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
             .left-column>.links>a{
                 color:#fff
@@ -51,15 +70,18 @@ body{
             float: right;
             /* kad atsitrauktu nuo krastu label */
             padding: 60px;
+            /* relative reikalingas, kad absolute elementas laikytusi norimo elemento */
             position: relative;
             }
             .right-column> .close {
+                /* 60 ir 60 nes formos kurioje yra paddingas yra 60px, tai, kad tilptu, x kvadratukas turi buti 60px ant 60px */
                 width: 60px;
                 line-height: 60px;
                 text-align: center;
                 font-size: 30px;
-    
+                /* pagal nutylejima visu elementu pozicija yra static */
                 position: absolute;
+                /* toks top aprasymas galioja tik kai yra position */
                 top: 0;
                 right: 0;
             }
