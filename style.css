@@ -76,9 +76,10 @@ body{
             .right-column> .close {
                 /* 60 ir 60 nes formos kurioje yra paddingas yra 60px, tai, kad tilptu, x kvadratukas turi buti 60px ant 60px */
                 width: 60px;
-                line-height: 60px;
+                line-height: 56px;
                 text-align: center;
                 font-size: 30px;
+                cursor: pointer;
                 /* pagal nutylejima visu elementu pozicija yra static */
                 position: absolute;
                 /* toks top aprasymas galioja tik kai yra position */
@@ -103,15 +104,14 @@ body{
                         /* pavyzdys su sasiuviniu,tai atstumas tarp atskiru zodziu */
                         line-height: 20px;
                         text-transform: uppercase;
+                        margin-bottom: 5px;
                     }
                     form > .form-row > input {
                         width: 100%;
                         font-size:22px;
                         line-height: 40px;
                         border:none;
-                        border-bottom: 2px solid lightgray;
-
-
+                        border-bottom: 2px solid #999;
                     }
                     /* reikalingas, kad uzejus ir vedant teksta neapibrauktu visko remeliu */
                         form > .form-row > input:focus {
@@ -119,6 +119,7 @@ body{
                         }
                     form > .form-row > .btn {
                         display: inline;
+                        padding: 10px;
                         padding-left: 20px;
                         padding-right: 20px;
                         background-color: blue;
@@ -126,7 +127,7 @@ body{
                         font-size: 20px;
                         line-height: 40px;
                         border-radius: 20px;
-
+                        
                     }
                     form > .form-row > span {
                         line-height: 40px;
@@ -138,4 +139,5 @@ body{
                        /* kad nebutu pabraukimo */
                        text-decoration: none;
                        line-height: 40px;
+            
                     }
